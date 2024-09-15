@@ -40,7 +40,7 @@ export default {
     async loadContent() {
       const languages = ["en", "hu"];
       for (const lang of languages) {
-        const response = await fetch(`/content/content_${lang}.json`);
+        const response = await fetch(`/vue-language-select/content/content_${lang}.json`);
         this.initData.setup.contents[lang] = await response.json();
       }
     }
