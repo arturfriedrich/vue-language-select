@@ -7,15 +7,15 @@ export default {
 </script>
 
 <template>
-  <nav class="navbar">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Artúr Friedrich</a>
-      <div class="navbar-nav">
-        <ul class="navbar-nav d-flex flex-row align-items-center">
-          <li class="nav-item me-3">
-            <span @click="$emit('toggleLanguage')" style="cursor: pointer;">
-              {{ initData.language === 'en' ? '🇬🇧' : '🇭🇺' }}
-            </span>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <button @click="$emit('toggleLanguage')" class="btn btn-dark">
+              {{ initData.language === 'en' ? 'EN' : 'HU' }}
+            </button>
           </li>
         </ul>
       </div>
@@ -24,5 +24,14 @@ export default {
 </template>
 
 <style scoped>
-
+.btn-dark {
+  background-color: black;
+  color: white;
+  border: none;
+}
+.btn-dark:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
 </style>
